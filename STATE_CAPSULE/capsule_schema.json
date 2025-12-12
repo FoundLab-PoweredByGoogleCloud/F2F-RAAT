@@ -1,0 +1,37 @@
+{
+  "title": "F2FStateCapsule",
+  "type": "object",
+  "properties": {
+    "T\u00b2": {
+      "type": "object"
+    },
+    "P(x)": {
+      "type": "object"
+    },
+    "Flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Tokens": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Proof": {
+      "type": "string"
+    },
+    "Constraints": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "T\u00b2",
+    "P(x)",
+    "Flags",
+    "Tokens",
+    "Proof"
+  ]
+}

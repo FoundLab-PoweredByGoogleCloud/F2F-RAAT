@@ -1,0 +1,10 @@
+{
+  "DecisionID": "dec-002",
+  "Decision": "ESCROW_OR_HOLD",
+  "Effects": [
+    {
+      "type": "ESCROW_OR_HOLD",
+      "duration_hours": 24
+    }
+  ]
+}
