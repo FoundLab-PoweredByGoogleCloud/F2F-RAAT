@@ -1,0 +1,7 @@
+flowchart TD
+  A[FACT + STATE_CAPSULE + POLICY] --> B[Validation Layer]
+  B -->|OK| C[Deterministic Evaluation]
+  C --> D[Select Decision from Finite Set]
+  D --> E[Apply Effects]
+  E --> F[Emit Decision + Veritas Commitments]
+  B -->|Fail| G[Safe Deny / Quarantine]

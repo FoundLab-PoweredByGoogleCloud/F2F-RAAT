@@ -1,0 +1,7 @@
+flowchart LR
+  X[Inputs: FACT] --> A[Spezzatura + Sigmoid]
+  A --> B[Reputational State]
+  B --> C[Build State Capsule]
+  C --> D[Capsule Validation]
+  D -->|Valid| E[Ready for Decision]
+  D -->|Invalid| F[Fail-Closed / Quarantine]

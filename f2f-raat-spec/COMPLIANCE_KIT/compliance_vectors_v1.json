@@ -1,0 +1,45 @@
+[
+  {
+    "meta": {
+      "id": "VEC-001",
+      "description": "Standard Good Behavior Transaction"
+    },
+    "input": {
+      "fact": {
+        "type": "PAYMENT_CLEARING",
+        "amount": 100.00,
+        "currency": "BRL"
+      },
+      "capsule": {
+        "t2_score": 8.5,
+        "flags": []
+      }
+    },
+    "expected_output": {
+      "decision": "ALLOW",
+      "new_score_delta": "+0.01"
+    }
+  },
+  {
+    "meta": {
+      "id": "VEC-002",
+      "description": "Sanctions List Hit (Hard Block)"
+    },
+    "input": {
+      "fact": {
+        "type": "External_List_Match",
+        "list_id": "OFAC_SDN",
+        "confidence": 1.0
+      },
+      "capsule": {
+        "t2_score": 9.0,
+        "flags": []
+      }
+    },
+    "expected_output": {
+      "decision": "DENY",
+      "applied_flags": ["SANCTIONED_ENTITY"],
+      "new_score": 0.0
+    }
+  }
+]

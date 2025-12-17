@@ -1,0 +1,19 @@
+{
+  "T\u00b2": {
+    "score": 3.4
+  },
+  "P(x)": {
+    "delta": -0.3
+  },
+  "Flags": [
+    "PATTERN_ANOMALY_HIGH"
+  ],
+  "Tokens": [
+    "ANOMALY_SPIKE"
+  ],
+  "Proof": "0xproof2",
+  "Constraints": {
+    "jurisdiction": "EU",
+    "version": "1.0.0"
+  }
+}

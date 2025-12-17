@@ -1,0 +1,125 @@
+openapi: 3.1.0
+info:
+  title: F2F-RAaT Execution API
+  version: 1.0.0
+  description: |
+    # From Fact to Feedback: Reputational Execution API
+    
+    This is the normative interface contract for interacting with the F2F-RAaT Engine.
+    
+    **Key Patterns:**
+    *   **Stateless**: The API does not store the user state. You must provide the `StateCapsule`.
+    *   **Deterministic**: Same inputs MUST yield same outputs.
+    *   **Idempotent**: Replaying a request is safe.
+
+servers:
+  - url: https://api.execution.foundlab.ai/v1
+    description: Production Runtime (Zero-Persistence)
+
+paths:
+  /execute:
+    post:
+      summary: Execute a Reputational Decision
+      operationId: executeDecision
+      description: |
+        Consumes a Fact and a State Capsule, applies the Policy, and returns a Binding Decision.
+        This operation is atomic and generates a Veritas Proof.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExecutionRequest'
+      responses:
+        '200':
+          description: Successful execution. Decision returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExecutionResult'
+        '400':
+          description: Malformed input (Schema Violation).
+        '403':
+          description: Signature Validation Failed (Capsule or Fact invalid).
+
+components:
+  schemas:
+    # --- INPUTS ---
+    ExecutionRequest:
+      type: object
+      required: [fact, current_capsule, context]
+      properties:
+        fact:
+          $ref: '#/components/schemas/Fact'
+        current_capsule:
+          $ref: '#/components/schemas/StateCapsule'
+        context:
+          type: object
+          description: Metadata about the caller (e.g. Request ID, Timestamp)
+          properties:
+            request_id: { type: string, format: uuid }
+            timestamp_utc: { type: string, format: date-time }
+
+    Fact:
+      type: object
+      description: An objective, PII-free behavioral event.
+      required: [fact_id, type, severity]
+      properties:
+        fact_id: { type: string, format: uuid }
+        type: { type: string, example: "GEO_VELOCITY_VIOLATION" }
+        severity: { type: number, format: float, minimum: 0.0, maximum: 1.0 }
+        dimensions:
+          type: object
+          additionalProperties: { type: number }
+
+    StateCapsule:
+      type: object
+      description: The boundary object carrying reputational state.
+      required: [t2, proof]
+      properties:
+        t2:
+          $ref: '#/components/schemas/T2Score'
+        flags:
+          type: array
+          items: { type: string }
+        proof:
+          type: string
+          description: Cryptographic signature of this capsule state.
+
+    T2Score:
+      type: object
+      properties:
+        global_score: { type: number }
+        vectors:
+          type: object
+          properties:
+            C: { type: number }
+            A: { type: number }
+            T: { type: number }
+
+    # --- OUTPUTS ---
+    ExecutionResult:
+      type: object
+      required: [decision, decision_id, veritas_proof, new_capsule_state]
+      properties:
+        decision_id: { type: string, format: uuid }
+        decision:
+          type: string
+          enum: [ALLOW, ALLOW_WITH_CONDITIONS, REVIEW, RATE_LIMIT, ESCROW, DENY]
+        rationale_code:
+          type: string
+          example: "POLICY_BLOCK_VELOCITY_HIGH"
+        veritas_proof:
+          $ref: '#/components/schemas/VeritasProof'
+        new_capsule_state:
+          $ref: '#/components/schemas/StateCapsule'
+          description: The updated reputational state after processing this fact.
+
+    VeritasProof:
+      type: object
+      description: The immutable audit trail.
+      properties:
+        input_hash: { type: string }
+        policy_hash: { type: string }
+        rationale_hash: { type: string }
+        validator_signature: { type: string }

@@ -1,0 +1,8 @@
+{
+  "DecisionID": "dec-002",
+  "FactDigest": "0xfact2",
+  "CapsuleHash": "0xcapsule2",
+  "PolicyID": "policy-1.0.0",
+  "RuntimeVersion": "1.0.0",
+  "VeritasHash": "0xveritas2"
+}

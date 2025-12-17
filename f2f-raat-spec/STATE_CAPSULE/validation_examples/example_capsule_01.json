@@ -1,0 +1,19 @@
+{
+  "T\u00b2": {
+    "score": 5.8
+  },
+  "P(x)": {
+    "delta": 0.12
+  },
+  "Flags": [
+    "GEO_MISMATCH_LOW"
+  ],
+  "Tokens": [
+    "GEO_CONFIDENCE_DELTA_MEDIUM"
+  ],
+  "Proof": "0xproof1",
+  "Constraints": {
+    "jurisdiction": "BR",
+    "version": "1.0.0"
+  }
+}
