@@ -8,6 +8,7 @@ This directory contains the machine-readable API specifications for integrating 
 | File | Type | Description |
 | :--- | :--- | :--- |
 | **[`f2f-raat-api.yaml`](f2f-raat-api.yaml)** | **OpenAPI 3.1** | The normative REST contract for the execution runtime. |
+| **[`FACT_SCHEMAS/`](FACT_SCHEMAS/)** | **JSON Schema** | Standard conceptual models for common input facts (e.g. Velocity, Identity). |
 
 ## 🔌 Integration Patterns
 

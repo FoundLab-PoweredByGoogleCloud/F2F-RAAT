@@ -38,6 +38,7 @@ In case of catastrophic AI failure (e.g., blocking all users), we have a kinetic
 *   **No Silent Edits**: Every administrative action leaves a hash on the Veritas Ledger.
 *   **No Single Point of Failure**: Critical changes require M-of-N consensus.
 *   **Time-Lock**: Major policy shifts have a mandatory delay before activation.
+*   **Regulatory Alignment**: See **[Compliance Matrix](../COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)** for BACEN Res. 4.968 mapping.
 
 ---
 

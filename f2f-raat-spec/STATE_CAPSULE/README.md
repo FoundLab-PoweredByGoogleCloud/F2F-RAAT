@@ -52,6 +52,7 @@ The capsule is a strictly typed JSON object.
 - **[Capsule Schema (JSON)](capsule_schema.json)**: The strict validation schema.
 - **[Constraint Logic](constraints.md)**: Rules for capsule validity (TTL, Origin).
 - **[Validation Examples](validation_examples/)**: Test vectors for implementers.
+- **[Compliance Mapping](../COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)**: How the Capsule satisfies Privacy by Design/Default (GDPR Art. 25).
 
 ---
 

@@ -1,10 +1,10 @@
 {
   "DecisionID": "dec-002",
   "Decision": "ESCROW_OR_HOLD",
-  "Effects": [
-    {
-      "type": "ESCROW_OR_HOLD",
-      "duration_hours": 24
+  "Effects": {
+    "ESCROW_OR_HOLD": {
+      "reason": "HIGH_VALUE_UNUSUAL_CORRIDOR",
+      "hold_duration": "24h"
     }
-  ]
+  }
 }

@@ -3,7 +3,47 @@
   "type": "object",
   "properties": {
     "T\u00b2": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "score",
+        "vectors"
+      ],
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "vectors": {
+          "type": "object",
+          "required": [
+            "C",
+            "A",
+            "T",
+            "U",
+            "R",
+            "Â"
+          ],
+          "properties": {
+            "C": {
+              "type": "number"
+            },
+            "A": {
+              "type": "number"
+            },
+            "T": {
+              "type": "number"
+            },
+            "U": {
+              "type": "number"
+            },
+            "R": {
+              "type": "number"
+            },
+            "Â": {
+              "type": "number"
+            }
+          }
+        }
+      }
     },
     "P(x)": {
       "type": "object"

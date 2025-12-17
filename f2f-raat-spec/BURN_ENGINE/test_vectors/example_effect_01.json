@@ -1,14 +1,12 @@
 {
   "DecisionID": "dec-001",
   "Decision": "ALLOW_WITH_CONDITIONS",
-  "Effects": [
-    {
-      "type": "RATE_LIMIT",
+  "Effects": {
+    "RATE_LIMIT": {
       "value": "50 tx/day"
     },
-    {
-      "type": "FLAG_ONLY",
+    "FLAG_ONLY": {
       "value": "LOW_RISK_OBSERVED"
     }
-  ]
+  }
 }

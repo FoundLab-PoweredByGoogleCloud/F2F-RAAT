@@ -58,6 +58,7 @@ Start here to understand the philosophy before the code:
 
 1.  **[The Regulatory Paradox](./01_THE_REGULATORY_PARADOX.md)**
     *   *The Problem*: Why banks are trapped between retention and erasure.
+    *   *(See [Compliance Matrix](../COMPLIANCE_KIT/COMPLIANCE_MATRIX.md) for legal specifics)*
 2.  **[The Three Pillars](./02_TRUST_BY_PHYSICS_PILLARS.md)**
     *   *The Solution*: How we use physics to solve law.
 3.  **[Cognitive Auditability](./03_COGNITIVE_AUDITABILITY_AI.md)**

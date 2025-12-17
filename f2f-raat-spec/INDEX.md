@@ -26,6 +26,7 @@ Use this index to navigate the F2F-RAaT specification based on your role.
 *   **[API Specification (OpenAPI)](INTERFACE_CONTRACTS/f2f-raat-api.yaml)**: The REST contract.
 *   **[Input/Output Vectors](COMPLIANCE_KIT/compliance_vectors_v1.json)**: Test cases for QA.
 *   **[State Capsule Schema](STATE_CAPSULE/capsule_schema.json)**: The JSON structure of reputation.
+*   **[Fact Schemas](INTERFACE_CONTRACTS/FACT_SCHEMAS/)**: JSON Schemas for standard input facts.
 *   **[Burn Engine Logic](BURN_ENGINE/burn_engine_spec.md)**: How decisions are computed.
 
 ## 🛡️ For Auditors & Security
@@ -33,6 +34,7 @@ Use this index to navigate the F2F-RAaT specification based on your role.
 
 *   **[Veritas Proof Spec](VERITAS/veritas_proof_spec.md)**: How the audit trail works.
 *   **[Threat Model](THREAT_MODEL/README.md)**: Defense against poisoning and attacks.
+*   **[Compliance Matrix](COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)**: Regulatory mapping (GDPR/LGPD/BACEN).
 *   **[Cognitive Auditability](ATI_ARCHITECTURE/03_COGNITIVE_AUDITABILITY_AI.md)**: Proving AI intent.
 
 ---

@@ -41,6 +41,7 @@ The engine outputs one of the following bounded states:
 
 - **[Burn Engine Spec](burn_engine_spec.md)**: The runtime logic constraints.
 - **[Effect Set](effect_set.md)**: Detailed definitions of all possible actions.
+- **[Input Facts](../INTERFACE_CONTRACTS/FACT_SCHEMAS/)**: Standard schemas for the `Fact` input argument.
 
 ---
 

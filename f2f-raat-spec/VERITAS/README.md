@@ -43,6 +43,7 @@ If a regulator asks "Why did you block this user in 2024?", you do not look at l
 
 - **[Proof Format Spec](veritas_proof_spec.md)**: The JSON structure of the proof.
 - **[Audit Rules](audit_rules.md)**: How to validate a proof chain.
+- **[Compliance Mapping](../COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)**: How Veritas satisfies BACEN/SOX retention rules.
 
 ---
 

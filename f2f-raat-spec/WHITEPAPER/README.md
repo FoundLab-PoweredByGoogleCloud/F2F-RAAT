@@ -9,10 +9,11 @@ While the `ATI_ARCHITECTURE` directory describes the *System*, the Whitepaper de
 
 ## 📜 Core Documents
 
-### 1. [F2F-RAaT Whitepaper v1.0](F2F-RAAT_WHITEPAPER_v1.md)
+### 1. [F2F-RAaT Whitepaper v1.1](F2F-RAAT_WHITEPAPER_v1.1.md)
 *   **The Problem**: Why probabilistic reputation fails in regulated markets.
 *   **The Hypothesis**: Trust can be modeled as physics (Conservation of Reputation).
 *   **The Mechanism**: How to construct a closed-loop feedback system.
+*   **Regulatory Alignment**: See the **[Compliance Matrix](../COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)** for legal justifications.
 
 ### 2. [Glossary of Terms](glossary.md)
 A strictly defined lexicon is critical for precision.

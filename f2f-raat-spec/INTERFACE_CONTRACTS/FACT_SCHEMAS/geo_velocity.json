@@ -1,0 +1,21 @@
+{
+  "$id": "https://f2f-raat.foundlab.ai/schemas/geo_velocity.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Geo Violation Fact",
+  "type": "object",
+  "required": ["fact_id", "type", "severity", "dimensions"],
+  "properties": {
+    "fact_id": { "type": "string", "format": "uuid" },
+    "type": { "const": "GEO_VELOCITY_VIOLATION" },
+    "severity": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+    "dimensions": {
+      "type": "object",
+      "required": ["distance_km", "delta_t_sec", "velocity_kmh"],
+      "properties": {
+        "distance_km": { "type": "number" },
+        "delta_t_sec": { "type": "number" },
+        "velocity_kmh": { "type": "number" }
+      }
+    }
+  }
+}

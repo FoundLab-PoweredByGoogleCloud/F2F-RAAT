@@ -20,7 +20,7 @@
 ## 2. The Attack Begins (T = 0s to T = 2s)
 The attacker scripts 5 transactions of R$ 500 in 2 seconds.
 
-*   **Fact 1**: `Transfer R$ 500` -> **Decision**: `ALLOW`. (Normal behavior).
+*   **Fact 1**: `Transfer R$ 500` (See [`geo_velocity.json`](../INTERFACE_CONTRACTS/FACT_SCHEMAS/geo_velocity.json)) -> **Decision**: `ALLOW`. (Normal behavior).
 *   **Fact 2**: `Transfer R$ 500` -> **Decision**: `ALLOW`.
 *   **Fact 3**: `Transfer R$ 500` -> **Decision**: `ALLOW`.
 

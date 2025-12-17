@@ -18,7 +18,7 @@ Valid decisions MUST be one of:
 A decision SHALL be valid only if:
 
 - It references immutable identifiers: `DecisionID`, `PolicyID`, `CapsuleHash`, `FactDigest`, `RuntimeVersion`.  
-- It includes a bounded, schema-defined `Effects[]` list, each effect being policy-enumerated.  
+- It includes a bounded, schema-defined `Effects` structure (Map), each effect being policy-enumerated.  
 - It is reproducible by re-executing the deterministic function over the same inputs.
 
 ## Economic Binding

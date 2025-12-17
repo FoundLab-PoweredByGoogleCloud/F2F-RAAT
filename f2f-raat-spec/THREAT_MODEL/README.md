@@ -32,6 +32,7 @@ F2F-RAaT implements a **Cryptographic Break-Glass**:
 
 - **[Adversarial Vectors](adversarial_vectors.md)**: Deep dive into attack scenarios.
 - **[Mitigation Patterns](mitigation_patterns.md)**: Architectural defenses.
+- **[Compliance Mapping](../COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)**: How these defenses satisfy legal requirements.
 
 ---
 

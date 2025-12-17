@@ -1,4 +1,4 @@
-# F2F-RAaT Whitepaper — v1.0
+# F2F-RAaT Whitepaper — v1.1
 ### From Fact to Feedback: A Reputation-as-a-Transaction Framework
 ### FoundLab — Auditable Trust Infrastructure
 

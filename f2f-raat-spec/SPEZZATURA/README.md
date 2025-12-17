@@ -47,7 +47,7 @@ graph LR
 ## 📚 Component Specifications
 
 - **[T² Formal Spec](spezzatura_t2_spec.md)**: The complete mathematical definition.
-- **[Vector Calculation](vector_calculation.md)**: How to compute $C, A, T...$ from raw facts.
+- **[Vector Calculation](vector_calculation.md)**: Formal definitions and **numerical examples** for computing $C, A, T...$ from raw facts.
 - **[Sigmoid P(x) Model](sigmoid_px_model.md)**: The acute reactivity model for immediate threats.
 - **[Examples](examples/)**: Walkthroughs of score calculation.
 

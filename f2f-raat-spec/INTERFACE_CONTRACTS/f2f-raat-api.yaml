@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: F2F-RAaT Execution API
-  version: 1.0.0
+  version: 1.1.0
   description: |
     # From Fact to Feedback: Reputational Execution API
     
@@ -70,7 +70,8 @@ components:
         severity: { type: number, format: float, minimum: 0.0, maximum: 1.0 }
         dimensions:
           type: object
-          additionalProperties: { type: number }
+          additionalProperties: true
+          description: Flexible payload for fact-specific measurements (numbers, strings, enums).
 
     StateCapsule:
       type: object
@@ -96,6 +97,9 @@ components:
             C: { type: number }
             A: { type: number }
             T: { type: number }
+            U: { type: number }
+            R: { type: number }
+            Â: { type: number }
 
     # --- OUTPUTS ---
     ExecutionResult:
@@ -109,6 +113,10 @@ components:
         rationale_code:
           type: string
           example: "POLICY_BLOCK_VELOCITY_HIGH"
+        effects:
+          type: object
+          additionalProperties: true
+          description: Dynamic parameters for the decision (e.g. freeze duration).
         veritas_proof:
           $ref: '#/components/schemas/VeritasProof'
         new_capsule_state:

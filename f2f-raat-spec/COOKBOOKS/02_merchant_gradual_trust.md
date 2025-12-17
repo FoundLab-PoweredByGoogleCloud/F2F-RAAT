@@ -30,7 +30,7 @@ The merchant has transacted every day for 30 days without chargebacks.
 ## 3. Day 90: The Attempted "Exit Scam"
 The merchant tries to process R$ 500k in one hour (10x their normal volume).
 
-*   **Fact**: `Volume Spike R$ 500k`.
+*   **Fact**: `Volume Spike R$ 500k` (See `FACT_SCHEMAS`).
 *   **Spezzatura Calc**:
     *   Vector `A` (Activity) spikes massively.
     *   Vector `C` (Compliance) drops because this violates the "Consistent Growth" pattern.

@@ -17,6 +17,12 @@ The vectors are not derived from raw data but from typed **Facts** aggregated ov
   C = 1.0 - (penalty_rate * number_of_violations_in_window)
   ```
   The `penalty_rate` is defined in the `POLICY`.
+  
+  #### Example
+  > Start: 1.0
+  > Violations: 2 (Minor Compliance Miss)
+  > Penalty: 0.1 per violation
+  > **Result**: `C = 1.0 - (0.1 * 2) = 0.8`
 
 ---
 
@@ -29,6 +35,11 @@ The vectors are not derived from raw data but from typed **Facts** aggregated ov
   A = normalize(activity_count / baseline_expected_in_window)
   ```
   The `baseline_expected` is defined in the `POLICY`.
+  
+  #### Example
+  > Activity: 50 ops/hour
+  > Baseline: 100 ops/hour
+  > **Result**: `A = 50 / 100 = 0.5`
 
 ---
 
@@ -41,6 +52,11 @@ The vectors are not derived from raw data but from typed **Facts** aggregated ov
   T = regularity_score
   ```
   The `T²` component is applied only within the final Spezzatura formula.
+  
+  #### Example
+  > Age: 30 days
+  > Consistency Factor: 0.9 (Very consistent)
+  > **Result**: `T = 0.9` (Then squared in T² = 0.81)
 
 ---
 
@@ -52,6 +68,10 @@ The vectors are not derived from raw data but from typed **Facts** aggregated ov
   ```
   U = uniqueness_entropy_score
   ```
+  #### Example
+  > Entropy Measure: 4.5 bits
+  > Normalization Factor: 1.0
+  > **Result**: `U = 4.5`
 
 ---
 
@@ -63,6 +83,10 @@ The vectors are not derived from raw data but from typed **Facts** aggregated ov
   ```
   R = centrality_score_of_subject
   ```
+  #### Example
+  > PageRank Score: 0.005
+  > Log Scale Adjustment: x100
+  > **Result**: `R = 0.5`
 
 ---
 
@@ -74,3 +98,6 @@ The vectors are not derived from raw data but from typed **Facts** aggregated ov
   ```
   Â = f(consistency_over_time)
   ```
+  #### Example
+  > Coherence: Perfect (No contradictions)
+  > **Result**: `Â = 1.0`

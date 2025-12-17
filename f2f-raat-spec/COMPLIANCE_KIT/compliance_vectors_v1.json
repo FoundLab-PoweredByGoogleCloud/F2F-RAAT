@@ -6,13 +6,29 @@
     },
     "input": {
       "fact": {
+        "fact_id": "mock-001",
         "type": "PAYMENT_CLEARING",
-        "amount": 100.00,
-        "currency": "BRL"
+        "severity": 0.0,
+        "dimensions": {
+          "amount": 100.00,
+          "currency": "BRL"
+        }
       },
       "capsule": {
-        "t2_score": 8.5,
-        "flags": []
+        "T²": {
+          "score": 8.5,
+          "vectors": {
+            "C": 0.9,
+            "A": 0.8,
+            "T": 0.9,
+            "U": 0.5,
+            "R": 0.5,
+            "Â": 0.5
+          }
+        },
+        "Flags": [],
+        "Proof": "mock_proof_1",
+        "Tokens": []
       }
     },
     "expected_output": {
@@ -27,18 +43,36 @@
     },
     "input": {
       "fact": {
-        "type": "External_List_Match",
-        "list_id": "OFAC_SDN",
-        "confidence": 1.0
+        "fact_id": "mock-002",
+        "type": "EXTERNAL_LIST_MATCH",
+        "severity": 1.0,
+        "dimensions": {
+          "list_id": "OFAC_SDN",
+          "confidence": 1.0
+        }
       },
       "capsule": {
-        "t2_score": 9.0,
-        "flags": []
+        "T²": {
+          "score": 9.0,
+          "vectors": {
+            "C": 1.0,
+            "A": 0.9,
+            "T": 0.9,
+            "U": 0.8,
+            "R": 0.8,
+            "Â": 0.8
+          }
+        },
+        "Flags": [],
+        "Proof": "mock_proof_2",
+        "Tokens": []
       }
     },
     "expected_output": {
       "decision": "DENY",
-      "applied_flags": ["SANCTIONED_ENTITY"],
+      "applied_flags": [
+        "SANCTIONED_ENTITY"
+      ],
       "new_score": 0.0
     }
   }

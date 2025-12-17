@@ -1,0 +1,48 @@
+{
+    "$id": "https://f2f-raat.foundlab.ai/schemas/identity_challenge.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Identity Challenge Success Fact",
+    "type": "object",
+    "required": [
+        "fact_id",
+        "type",
+        "severity",
+        "dimensions"
+    ],
+    "properties": {
+        "fact_id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "type": {
+            "const": "IDENTITY_CHALLENGE_SUCCESS"
+        },
+        "severity": {
+            "const": 0.0
+        },
+        "dimensions": {
+            "type": "object",
+            "required": [
+                "method",
+                "liveness_score"
+            ],
+            "properties": {
+                "method": {
+                    "enum": [
+                        "BIOMETRIC",
+                        "DEVICE",
+                        "KBA"
+                    ]
+                },
+                "liveness_score": {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0
+                },
+                "provider": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@
 [![Architecture](https://img.shields.io/badge/architecture-ATI_v3.0-blueviolet.svg?style=flat-square)](ATI_ARCHITECTURE/)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--ND%204.0-lightgrey.svg?style=flat-square)](LICENSE)
 [![Compliance](https://img.shields.io/badge/pii-zero-success.svg?style=flat-square)](STATE_CAPSULE/)
+[![Regulatory](https://img.shields.io/badge/regulatory-GDPR%2F%20LGPD%2F%20BACEN-blue.svg?style=flat-square)](COMPLIANCE_KIT/COMPLIANCE_MATRIX.md)
 
 ---
 
@@ -82,7 +83,7 @@ How F2F-RAaT turns a fact into a binding decision in 3 milliseconds.
 {
   "fact_id": "evt_9982371",
   "type": "geo_velocity_violation",
-  "meta": { "distance_km": 4000, "delta_t_sec": 300 }
+  "dimensions": { "distance_km": 4000, "delta_t_sec": 300 }
 }
 ```
 
@@ -127,6 +128,7 @@ The specification is modular. Each directory contains normative rules for that s
 ### 🛡️ Assurance & Governance
 - **[VERITAS/](VERITAS/)** — **The Truth**. Specification for immutable audit trails and proofs.
 - **[THREAT_MODEL/](THREAT_MODEL/)** — **The Defenses**. Analysis of adversarial vectors (e.g., Poisoning).
+- **[COMPLIANCE_KIT/](COMPLIANCE_KIT/)** — **The Standards**. Test vectors, Q.A., and Regulatory mapping (GDPR/LGPD).
 - **[GOVERNANCE/](GOVERNANCE/)** — **The Control**. Rules for policy signing and break-glass protocols.
 - **[WHITEPAPER/](WHITEPAPER/)** — **The Theory**. The deep-dive conceptual framework.
 
@@ -134,7 +136,7 @@ The specification is modular. Each directory contains normative rules for that s
 
 ## 📦 Versioning & Integrity
 
-Current Spec Version: **1.0.0**
+Current Spec Version: **1.1.0**
 
 - **Semantic Versioning**: `MAJOR.MINOR.PATCH`
 - **Integrity**: All normative docs are hashed. Changing a line in `invariants.md` invalidates the spec signature.
